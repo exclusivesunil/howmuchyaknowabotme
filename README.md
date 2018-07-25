@@ -6,4 +6,4 @@ Show your love to your beloved one? Answer his/her quiz and get a chance to carv
 
 1. Say Alice wants to know how much Bob knows(loves) her, she goes to xxx and create some multiple choice questions there. A invitation URL will be generated. Alice then send the URL to Bob.
 2. Bob has to answer all the questions correctly. he has only 3 chances for mistake. 
-3. Only when he successfully pass the challenge that he would take the chance to send a love message to blockchain. For that he need to pay 1 GAS to the developer. If he do so, the message along with all the questions would be carved to NEO eternally.
+3. Only when Bob successfully pass the challenge that he would take the chance to send a love message to blockchain. For that he need to pay 1 GAS to the developer. If he do so, the message along with all the questions would be carved to NEO eternally.
