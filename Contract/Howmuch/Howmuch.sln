@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Howmuch", "Howmuch\Howmuch.csproj", "{BDC4AC7B-9922-403F-9AFF-2DAFA454CCBC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDC4AC7B-9922-403F-9AFF-2DAFA454CCBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDC4AC7B-9922-403F-9AFF-2DAFA454CCBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDC4AC7B-9922-403F-9AFF-2DAFA454CCBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDC4AC7B-9922-403F-9AFF-2DAFA454CCBC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
