@@ -9,3 +9,14 @@
 /Users/danielpan/Projects/BlockhainProjects/Competitions/NEOGameHowmuch/Contract/Howmuch/Howmuch/obj/Debug/netstandard2.0/Howmuch.AssemblyInfo.cs
 /Users/danielpan/Projects/BlockhainProjects/Competitions/NEOGameHowmuch/Contract/Howmuch/Howmuch/obj/Debug/netstandard2.0/Howmuch.dll
 /Users/danielpan/Projects/BlockhainProjects/Competitions/NEOGameHowmuch/Contract/Howmuch/Howmuch/obj/Debug/netstandard2.0/Howmuch.pdb
+/Users/liqingpan/DL/howmuchyaknowabotme/Contract/Howmuch/Howmuch/bin/Debug/netstandard2.0/Howmuch.deps.json
+/Users/liqingpan/DL/howmuchyaknowabotme/Contract/Howmuch/Howmuch/bin/Debug/netstandard2.0/Howmuch.dll
+/Users/liqingpan/DL/howmuchyaknowabotme/Contract/Howmuch/Howmuch/bin/Debug/netstandard2.0/Howmuch.pdb
+/Users/liqingpan/DL/howmuchyaknowabotme/Contract/Howmuch/Howmuch/bin/Debug/netstandard2.0/Neo.SmartContract.Framework.dll
+/Users/liqingpan/DL/howmuchyaknowabotme/Contract/Howmuch/Howmuch/bin/Debug/netstandard2.0/Neo.SmartContract.Framework.pdb
+/Users/liqingpan/DL/howmuchyaknowabotme/Contract/Howmuch/Howmuch/obj/Debug/netstandard2.0/Howmuch.csprojResolveAssemblyReference.cache
+/Users/liqingpan/DL/howmuchyaknowabotme/Contract/Howmuch/Howmuch/obj/Debug/netstandard2.0/Howmuch.csproj.CoreCompileInputs.cache
+/Users/liqingpan/DL/howmuchyaknowabotme/Contract/Howmuch/Howmuch/obj/Debug/netstandard2.0/Howmuch.AssemblyInfoInputs.cache
+/Users/liqingpan/DL/howmuchyaknowabotme/Contract/Howmuch/Howmuch/obj/Debug/netstandard2.0/Howmuch.AssemblyInfo.cs
+/Users/liqingpan/DL/howmuchyaknowabotme/Contract/Howmuch/Howmuch/obj/Debug/netstandard2.0/Howmuch.dll
+/Users/liqingpan/DL/howmuchyaknowabotme/Contract/Howmuch/Howmuch/obj/Debug/netstandard2.0/Howmuch.pdb
