@@ -23,12 +23,13 @@ namespace Howmuch
 	public class Howmuch: SmartContract
     {
 
-        
+        [Serializable]
 		public class Question{
 			public byte[] title;    //The title of a question
 			public byte[] answer;   //The correct answer of this quesion. Only the correct answr would be recorded onto blockchain.
 		}
-        
+
+        [Serializable]
 		public class Quiz{
 			public byte[] nameInquirer;     //The name of the quiz inquirer   
 			public byte[] nameAnswerer;     //The name of the quiz answerer
