@@ -1,0 +1,98 @@
+<div class="row">
+
+  <div id="quiz" class="col-12">
+    <h2 class="text-center font-weight-normal">Carve My Love</h2>
+    <hr />
+
+    <div *ngIf="mode=='entername'" class="col-4">
+      <form [formGroup]="entryForm" novalidate>
+
+        <div class="form-group">
+          <label for="name">Enter your Name</label>
+          <input type="text" class="form-control" id="name" formControlName="fullName" required>
+        </div>
+      </form>
+    </div>
+
+    <!-- show URL here -->
+    <div *ngIf="mode=='showurl'" class="col-12">
+        <form [formGroup]="entryForm" novalidate>
+  
+          <div class="form-group">
+            <label for="name"> <strong>Use this URL to share with your loved one</strong></label><Br/>
+            {{quizURL}}
+          </div>
+        </form>
+      </div>
+
+
+    <!-- create quiz(s) here -->
+    <div *ngIf="mode=='enterqueans'" class="col-12">
+      <form [formGroup]="quizForm" novalidate>
+
+        <div class="form-group">
+          <label for="name">Enter Question (# {{pager.index}})</label>
+          <input type="text" class="form-control" id="question" formControlName="questionName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="option1"   class="row">Enter option (1)</label>
+            <input  type="radio"  value="1" formControlName="answer"/> &nbsp;&nbsp;
+            <input type="text" class="form-control" class="col-8" id="option1" formControlName="option1" required>
+        </div>
+          
+
+        <div class="form-group">
+          <label for="name" class="row">Enter option (2)</label>
+          <input  type="radio"  value="2" formControlName="answer"/> &nbsp;&nbsp;
+          <input type="text" class="form-control" class="col-8" id="question" formControlName="option2" required>
+        </div>
+        <div class="form-group">
+          <label for="name" class="row">Enter option (3)</label>
+          <input  type="radio"  value="3" formControlName="answer"/> &nbsp;&nbsp;
+
+          <input type="text" class="form-control"  class="col-8" id="question" formControlName="option3" required>
+        </div>
+        <div class="form-group">
+          <label for="name" class="row">Enter option (4)</label>
+          <input  type="radio"  value="4" formControlName="answer"/> &nbsp;&nbsp;
+
+          <input type="text" class="form-control"  class="col-8" id="question" formControlName="option4" required>
+        </div>
+      </form>
+    </div>
+
+
+    <div class="row text-center" *ngIf="mode=='review'">
+      <div class="col-4 cursor-pointer" *ngFor="let question of quiz.questions; let index = index;">
+        <div (click)="goTo(index)" class="p-3 mb-2 {{ isoptioned(question) == 'optioned'? 'bg-info': 'bg-warning' }}">{{index + 1}}. {{ isoptioned(question) }}</div>
+      </div>
+    </div>
+    <div class="result" *ngIf="mode=='result'">
+      <h2>Quiz Result</h2>
+      <div *ngFor="let question of quiz.questions; let index = index">
+        <div class="result-question">
+          <h5>{{index + 1}}. {{question.name}}</h5>
+          <div class="row">
+            <div class="col-6" *ngFor="let Option of question.options">
+              <input id="{{Option.id}}" type="checkbox" disabled="disabled" [(ngModel)]="Option.selected" /> {{Option.name}}
+            </div>
+          </div>
+          <div class="p-1 m-2 alert {{ isCorrect(question) == 'correct'? 'alert-success': 'alert-danger'}}">Your option is {{isCorrect(question)}}.</div>
+        </div>
+      </div>
+      <h4 class="alert alert-info text-center">You may close this window now.</h4>
+    </div>
+    <hr />
+    <div *ngIf="mode=='entername'" class="col-4">
+      <button class="btn btn-primary" (click)="saveChanges();">Enter Name</button>
+    </div>
+
+    <div *ngIf="mode=='enterqueans'" class="col-4">
+      <button *ngIf="pager.index ==  (maxQuizQuestions-1)"  class="btn btn-primary" (click)="submitQuiz();"> Submit Quiz</button>
+      <button *ngIf="pager.index < (maxQuizQuestions-1)" class="btn btn-primary" (click)="saveQuestion();">Enter Question (# {{pager.index}})</button>
+
+    </div>
+
+
+  </div>
