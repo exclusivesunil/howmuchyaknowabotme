@@ -1,7 +1,10 @@
 <?php
 
+include 'config.php';
+
 $quiz ='{
-  "answer": [
+  "quizName": "Quiz for my love",
+  "options": [
     {
       "questionName": "test",
       "option1": "new",
@@ -22,6 +25,20 @@ $quiz ='{
 }';
 
 
+$servername = "localhost";
+$username = "root";
+$password = "sunil123";
+$dbname = "carvemylove";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+
+
 $quizJson= (json_decode($quiz));
 
 function guidv4($data)
@@ -36,11 +53,25 @@ function guidv4($data)
 
 $random_hash = guidv4(openssl_random_pseudo_bytes(16));
 
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+
+
 
 for ($x = 0; $x <= count($quizJson); $x++) {
-    var_dump($quizJson->answer[$x]);
+    var_dump($quizJson);
 
-    $sqlQuesiton ="insert into quizes (quiz_name, random_hash, answer) values('".$quizJson->answer[$x]->questionName ."', '".$random_hash ."',".$quizJson->answer[$x]->answer .")";
+   // $sqlQuesiton ="insert into quizes (quiz_name, random_hash, answer) values('".$quizJson->answer[$x]->questionName ."', '".$random_hash ."',".$quizJson->answer[$x]->answer .")";
+      
+    $sqlQuesiton ="insert into quizes (quiz_name, random_hash) values('".$quizJson->quizName ."', '".$random_hash ."')";
+
     echo $sqlQuesiton."<Br>";
+
+
 } 
 ?>

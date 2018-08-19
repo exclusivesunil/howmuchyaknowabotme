@@ -68,7 +68,7 @@ namespace Howmuch
 
         public static byte[] Quiz2Bytes(Quiz quiz){
             byte[] ret = NuSD.Seg(quiz.nameInquirer).AddSeg(quiz.nameAnswerer).AddSegStr(quiz.message);
-            byte[] qids = Op.Void;
+            byte[] qids = Op.Void();
             for (int i = 0; i < quiz.questions.Length;i++){
                 qids = qids.AddSeg(Question2Bytes(quiz.questions[i]));
             }
