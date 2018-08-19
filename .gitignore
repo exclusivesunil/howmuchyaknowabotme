@@ -22,3 +22,7 @@ yarn-error.log*
 # Mac OSX Finder files.
 **/.DS_Store
 .DS_Store
+
+#.net
+Contract/Howmuch/Howmuch/bin/Debug/
+Contract/Howmuch/Howmuch/obj/Debug/
