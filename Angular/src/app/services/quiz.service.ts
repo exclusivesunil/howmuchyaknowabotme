@@ -5,15 +5,22 @@ import { map } from 'rxjs/operators';
 
 @Injectable()
 export class QuizService {
+  domain = 'http://localhost'
 
   constructor(private http: HttpClient) { }
 
-  get(url: string) {
+  get(hash: string) {
+
+     let url =this.domain+'/php/getquiz.php?random_hash='+ hash;
     return this.http.get(url);
   }
 
-  submitQuiz(quiz: any)
+  submitQuiz(quiz: any) 
   {
+    let url =this.domain+'/php/submitquiz.php';
+
+    return this.http.post(url, quiz);
+    
 
   }
 

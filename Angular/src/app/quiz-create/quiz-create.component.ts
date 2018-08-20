@@ -23,7 +23,7 @@ export class QuizCreateComponent implements OnInit {
     count: 1
   };
   constructor(private quizService: QuizService) {
-    this.quiz.answer = [];
+    this.quiz.options = [];
   }
 
   ngOnInit() {
@@ -35,7 +35,7 @@ export class QuizCreateComponent implements OnInit {
   saveQuestion() {
 
     if (this.quizForm.valid) {
-      this.quiz.answer.push(this.quizForm.value);
+      this.quiz.options.push(this.quizForm.value);
       this.createQuizForm(true);
     } else {
       console.log('invalid form');
@@ -45,11 +45,16 @@ export class QuizCreateComponent implements OnInit {
   submitQuiz() {
 
     if (this.quizForm.valid) {
-      this.quiz.answer.push(this.quizForm.value);
-      this.quizService.submitQuiz(this.quiz);
-      const hash: String = '232322-sdfsdf23-23423csf-sdcsdf3';
-      this.quizURL = location.href.replace(location.hash, '') + '#/quiz-answer?hash=' + hash;
-      this.mode = 'showurl';
+      this.quiz.options.push(this.quizForm.value);
+      this.quizService.submitQuiz(this.quiz).subscribe(res => { 
+        let response: any = res;
+        this.quizURL = location.href.replace(location.hash, '') + '#/quiz-answer?hash=' + response.random_hash;
+        this.mode = 'showurl';
+        console.log(res); 
+
+      });
+
+     
 
 
     } else {
