@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 
 @Injectable()
 export class QuizService {
-  domain = 'http://localhost'
+  domain = 'http://www.carvemylove.com'
 
   constructor(private http: HttpClient) { }
 

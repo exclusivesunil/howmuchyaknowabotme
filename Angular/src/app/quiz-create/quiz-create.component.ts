@@ -14,7 +14,7 @@ export class QuizCreateComponent implements OnInit {
   entryForm: any;
   quizForm: any;
   quizURL: string;
-  maxQuizQuestions: Number = 2;
+  maxQuizQuestions: Number = 5;
   quiz: any = {
   };
   pager = {
@@ -53,8 +53,6 @@ export class QuizCreateComponent implements OnInit {
         console.log(res); 
 
       });
-
-     
 
 
     } else {

@@ -12,8 +12,8 @@ import { QuizCreateComponent } from './quiz-create/quiz-create.component';
 const routes: Routes = [
   { path: 'quiz-create', component: QuizCreateComponent },
   { path: 'quiz-answer', component: QuizComponent },
-  { path: '', redirectTo: '/quiz-answer', pathMatch: 'full'},
-  { path: '**', redirectTo: '/quiz-answer' }
+  { path: '', redirectTo: '/quiz-create', pathMatch: 'full'},
+  { path: '**', redirectTo: '/quiz-create' }
 ];
 
 
